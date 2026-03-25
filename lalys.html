@@ -5,7 +5,7 @@
 <title>Welcome to Gent</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="refresh" content="60" />
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet" />
 <style>
 *{
 box-sizing:border-box;
@@ -35,8 +35,8 @@ position:absolute;
 inset:0;
 background:
 radial-gradient(circle at center, rgba(226,186,86,0.16) 0%, rgba(226,186,86,0.06) 18%, rgba(0,0,0,0) 42%),
-url("logo.png") center center / 38vh auto no-repeat;
-opacity:0.18;
+url("logo.png") center center / 40vh auto no-repeat;
+opacity:0.10;
 pointer-events:none;
 }
 body::after{
@@ -56,25 +56,50 @@ z-index:1;
 display:flex;
 justify-content:center;
 align-items:center;
-padding:2vh 3vw 1.3vh;
+padding:1.8vh 3vw 1.2vh;
 border-bottom:0.22vh solid rgba(219,181,88,0.72);
 background:
-linear-gradient(to right, rgba(255,255,255,0.05), rgba(255,245,214,0.10), rgba(255,255,255,0.05));
+linear-gradient(to right, rgba(255,255,255,0.04), rgba(255,245,214,0.10), rgba(255,255,255,0.04));
 box-shadow:0 0.6vh 2vh rgba(0,0,0,0.24);
 }
 .header-inner{
 display:flex;
 flex-direction:column;
 align-items:center;
-gap:0.55vh;
+gap:0.45vh;
+}
+.logo-medallion{
+width:15vh;
+height:15vh;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:1.2vh;
+background:
+radial-gradient(circle at 30% 30%, rgba(255,249,228,0.95) 0%, rgba(241,221,164,0.92) 38%, rgba(191,144,47,0.96) 72%, rgba(110,76,18,0.98) 100%);
+box-shadow:
+0 0.7vh 1.8vh rgba(0,0,0,0.28),
+inset 0 0 0 0.22vh rgba(255,238,191,0.75),
+inset 0 0 0 0.55vh rgba(161,114,33,0.45);
+position:relative;
+}
+.logo-medallion::before{
+content:"";
+position:absolute;
+inset:0.7vh;
+border-radius:50%;
+border:0.16vh solid rgba(255,240,194,0.65);
+pointer-events:none;
 }
 .header-logo{
-width:12vh;
-height:12vh;
+width:72%;
+height:72%;
 object-fit:contain;
 filter:
-drop-shadow(0 0.3vh 0.6vh rgba(0,0,0,0.35))
-drop-shadow(0 0 1.2vh rgba(219,181,88,0.12));
+drop-shadow(0 0.2vh 0.35vh rgba(0,0,0,0.28))
+drop-shadow(0 0 0.8vh rgba(219,181,88,0.16));
+mix-blend-mode:multiply;
 }
 h1{
 margin:0;
@@ -90,18 +115,21 @@ text-align:center;
 }
 .subtitle{
 margin:0;
-font-size:1.22vw;
-letter-spacing:0.08em;
-color:#f8ebc1;
+font-family:'Great Vibes',cursive;
+font-size:2vw;
+line-height:1;
+letter-spacing:0.02em;
+color:#f8e7be;
 text-align:center;
+text-shadow:0 0.08vh 0.2vh rgba(0,0,0,0.28);
 }
 main{
 position:relative;
 z-index:1;
 flex:1;
 display:grid;
-grid-template-columns:1.45fr 1fr;
-gap:1.6vw;
+grid-template-columns:1fr 1.45fr 1fr;
+gap:1.3vw;
 padding:2vh 2vw;
 min-height:0;
 }
@@ -138,6 +166,59 @@ line-height:1.2;
 color:#7b5811;
 text-align:center;
 text-shadow:0 0.05vh 0 rgba(255,255,255,0.45);
+}
+.side-panel{
+justify-content:space-between;
+}
+.promo-box{
+position:relative;
+z-index:1;
+display:flex;
+flex-direction:column;
+gap:1vh;
+height:100%;
+}
+.promo-main{
+padding:1.2vh 1vw;
+border-radius:0.8vw;
+background:rgba(255,255,255,0.82);
+border:1px solid rgba(214,184,110,0.45);
+box-shadow:
+0 0.25vh 0.7vh rgba(0,0,0,0.05),
+inset 0 0 0 0.04vw rgba(255,241,205,0.55);
+font-size:1.28vw;
+line-height:1.45;
+text-align:center;
+color:#4b3520;
+}
+.promo-main strong{
+font-family:'Cinzel',serif;
+font-size:1.4vw;
+color:#6c4b12;
+}
+.promo-contact{
+padding:1.1vh 1vw;
+border-radius:0.8vw;
+background:linear-gradient(135deg, rgba(255,249,238,0.90), rgba(255,244,221,0.82));
+border:1px solid rgba(214,184,110,0.42);
+text-align:center;
+font-family:'Cinzel',serif;
+font-size:1.2vw;
+line-height:1.5;
+color:#5a3d12;
+box-shadow:inset 0 0 0 0.04vw rgba(255,241,205,0.55);
+}
+.promo-bottom{
+margin-top:auto;
+padding:1.15vh 1vw;
+border-radius:0.8vw;
+background:linear-gradient(135deg, rgba(255,241,247,0.72), rgba(255,249,235,0.84));
+border:1px solid rgba(191,154,172,0.42);
+font-family:'Cinzel',serif;
+font-size:1.1vw;
+line-height:1.45;
+text-align:center;
+color:#6d3247;
 }
 .board-date{
 position:relative;
@@ -187,6 +268,13 @@ color:#5d4526;
 .guest{
 font-style:italic;
 }
+.g1{color:#e9859b;}
+.g2{color:#b7b87c;}
+.g3{color:#5ca1e4;}
+.g4{color:#d96f89;}
+.g5{color:#8b9d74;}
+.g6{color:#d86f79;}
+.g7{color:#c2be78;}
 .notice{
 position:relative;
 z-index:1;
@@ -279,8 +367,11 @@ font-style:italic;
 }
 @media (max-width: 1400px){
 h1{font-size:3.7vw;}
-.subtitle{font-size:1.5vw;}
+.subtitle{font-size:2.4vw;}
 .panel h2{font-size:2vw;}
+.promo-main,.promo-contact{font-size:1.35vw;}
+.promo-main strong{font-size:1.45vw;}
+.promo-bottom{font-size:1.25vw;}
 .arrivals-table th{font-size:1.25vw;}
 .arrivals-table td{font-size:1.7vw;}
 .notice{font-size:1.35vw;}
@@ -293,13 +384,33 @@ h1{font-size:3.7vw;}
 <body>
 <header>
 <div class="header-inner">
+<div class="logo-medallion">
 <img class="header-logo" src="logo.png" alt="Logo" />
+</div>
 <h1>Welcome to Gent</h1>
 <p class="subtitle">City of timeless romance</p>
 </div>
 </header>
 
 <main>
+<section class="panel side-panel">
+<h2>Exclusive Guest Benefit</h2>
+<div class="promo-box">
+<div class="promo-main">
+<strong>Enjoy 10% loyalty discount</strong><br>
+for your next stay at our partner hotel<br>
+<strong>P6 Antwerp</strong>
+</div>
+<div class="promo-contact">
++32 470 89 54 82<br>
+info@p6-antwerp.be
+</div>
+<div class="promo-bottom">
+A beautiful next stop in Antwerp, with the same warm hospitality.
+</div>
+</div>
+</section>
+
 <section class="panel">
 <h2>Guests Arriving</h2>
 <p class="board-date">Check-in 24.03</p>
@@ -387,6 +498,17 @@ result.push(current);
 return result;
 }
 
+function normalizeRoom(value){
+const text = String(value || "").trim();
+if(/^room\d+$/i.test(text)){
+return text.replace(/^room(\d+)$/i, "Room $1");
+}
+if(/^room\s+\d+$/i.test(text)){
+return text.replace(/^room\s+(\d+)$/i, "Room $1");
+}
+return text;
+}
+
 function parseCsv(text){
 const lines = text.trim().split(/\r?\n/).filter(line => line.trim() !== "");
 if(lines.length === 0) return [];
@@ -401,7 +523,7 @@ return rows
 .filter(row => (row[0] || "").trim() !== "" || (row[1] || "").trim() !== "")
 .slice(0, 7)
 .map(row => ({
-room: (row[0] || "").trim(),
+room: normalizeRoom(row[0]),
 guest: (row[1] || "").trim()
 }));
 }
