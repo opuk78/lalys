@@ -19,7 +19,7 @@ font-family:'Playfair Display',serif;
 color:#f7f0df;
 overflow:hidden;
 background:
-linear-gradient(135deg, rgba(17,18,28,0.96) 0%, rgba(28,23,40,0.95) 42%, rgba(37,30,48,0.95) 100%),
+linear-gradient(135deg, rgba(19,15,24,0.98) 0%, rgba(33,23,42,0.96) 34%, rgba(48,30,42,0.94) 68%, rgba(25,31,45,0.96) 100%),
 url("https://www.transparenttextures.com/patterns/old-map.png");
 background-size:cover;
 background-repeat:repeat;
@@ -34,10 +34,21 @@ content:"";
 position:absolute;
 inset:0;
 background:
-radial-gradient(circle at center, rgba(214,176,79,0.12) 0%, rgba(214,176,79,0.06) 18%, rgba(0,0,0,0) 42%),
-url("logo.png") center center / 34vh auto no-repeat;
-opacity:0.20;
+radial-gradient(circle at center, rgba(226,186,86,0.16) 0%, rgba(226,186,86,0.06) 18%, rgba(0,0,0,0) 42%),
+url("logo.png") center center / 38vh auto no-repeat;
+opacity:0.18;
 pointer-events:none;
+}
+body::after{
+content:"";
+position:absolute;
+inset:1.2vh 1.2vw;
+border:0.18vw solid rgba(215,175,77,0.45);
+box-shadow:
+inset 0 0 0 0.12vw rgba(255,231,166,0.32),
+0 0 2vh rgba(0,0,0,0.18);
+pointer-events:none;
+border-radius:1vw;
 }
 header{
 position:relative;
@@ -45,38 +56,43 @@ z-index:1;
 display:flex;
 justify-content:center;
 align-items:center;
-padding:2vh 3vw 1.2vh;
-border-bottom:0.25vh solid rgba(212,173,74,0.7);
-background:linear-gradient(to right, rgba(255,255,255,0.06), rgba(255,255,255,0.12), rgba(255,255,255,0.06));
-box-shadow:0 0.5vh 1.8vh rgba(0,0,0,0.22);
+padding:2vh 3vw 1.3vh;
+border-bottom:0.22vh solid rgba(219,181,88,0.72);
+background:
+linear-gradient(to right, rgba(255,255,255,0.05), rgba(255,245,214,0.10), rgba(255,255,255,0.05));
+box-shadow:0 0.6vh 2vh rgba(0,0,0,0.24);
 }
 .header-inner{
 display:flex;
 flex-direction:column;
 align-items:center;
-gap:0.6vh;
+gap:0.55vh;
 }
 .header-logo{
-width:11vh;
-height:11vh;
+width:12vh;
+height:12vh;
 object-fit:contain;
-filter:drop-shadow(0 0.3vh 0.6vh rgba(0,0,0,0.35));
+filter:
+drop-shadow(0 0.3vh 0.6vh rgba(0,0,0,0.35))
+drop-shadow(0 0 1.2vh rgba(219,181,88,0.12));
 }
 h1{
 margin:0;
 font-family:'Cinzel',serif;
-font-size:3vw;
+font-size:3.15vw;
 font-weight:700;
 letter-spacing:0.08em;
-color:#efcf7d;
-text-shadow:0 0.18vh 0.35vh rgba(0,0,0,0.45);
+color:#f2d180;
+text-shadow:
+0 0.15vh 0.35vh rgba(0,0,0,0.45),
+0 0 1.1vh rgba(214,176,79,0.14);
 text-align:center;
 }
 .subtitle{
 margin:0;
-font-size:1.2vw;
+font-size:1.22vw;
 letter-spacing:0.08em;
-color:#f5e9bd;
+color:#f8ebc1;
 text-align:center;
 }
 main{
@@ -90,25 +106,42 @@ padding:2vh 2vw;
 min-height:0;
 }
 .panel{
-background:linear-gradient(180deg, rgba(255,248,235,0.94) 0%, rgba(247,239,224,0.90) 100%);
-border:1px solid rgba(220,184,89,0.72);
+background:
+linear-gradient(180deg, rgba(255,250,240,0.95) 0%, rgba(247,238,220,0.92) 100%);
+border:1px solid rgba(220,184,89,0.78);
 border-radius:1vw;
-box-shadow:0 0.8vh 2.2vh rgba(0,0,0,0.18);
+box-shadow:
+0 0.9vh 2.4vh rgba(0,0,0,0.22),
+inset 0 0 0 0.08vw rgba(255,236,180,0.55);
 padding:1.5vh 1.2vw;
 color:#34261d;
 display:flex;
 flex-direction:column;
 min-height:0;
+position:relative;
+overflow:hidden;
+}
+.panel::before{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(135deg, rgba(255,255,255,0.22), rgba(255,255,255,0) 35%);
+pointer-events:none;
 }
 .panel h2{
+position:relative;
+z-index:1;
 margin:0 0 1.2vh;
 font-family:'Cinzel',serif;
-font-size:1.7vw;
+font-size:1.75vw;
 line-height:1.2;
-color:#7d5a13;
+color:#7b5811;
 text-align:center;
+text-shadow:0 0.05vh 0 rgba(255,255,255,0.45);
 }
 .board-date{
+position:relative;
+z-index:1;
 font-size:1.15vw;
 text-align:center;
 margin:-0.2vh 0 1.3vh;
@@ -116,14 +149,17 @@ color:#7a6342;
 font-style:italic;
 }
 .arrivals-table{
+position:relative;
+z-index:1;
 width:100%;
 border-collapse:collapse;
-background:rgba(255,255,255,0.72);
+background:rgba(255,255,255,0.80);
 border-radius:0.7vw;
 overflow:hidden;
+box-shadow:inset 0 0 0 0.05vw rgba(220,184,89,0.25);
 }
 .arrivals-table thead tr{
-background:linear-gradient(to right, rgba(208,175,88,0.18), rgba(130,91,22,0.10), rgba(208,175,88,0.18));
+background:linear-gradient(to right, rgba(222,189,98,0.28), rgba(145,100,22,0.10), rgba(222,189,98,0.28));
 }
 .arrivals-table th,
 .arrivals-table td{
@@ -151,14 +187,9 @@ color:#5d4526;
 .guest{
 font-style:italic;
 }
-.g1{color:#e9859b;}
-.g2{color:#b7b87c;}
-.g3{color:#5ca1e4;}
-.g4{color:#d96f89;}
-.g5{color:#8b9d74;}
-.g6{color:#d86f79;}
-.g7{color:#c2be78;}
 .notice{
+position:relative;
+z-index:1;
 margin-top:1.2vh;
 padding:1.1vh 1vw;
 font-family:'Cinzel',serif;
@@ -169,19 +200,24 @@ color:#6d3247;
 background:linear-gradient(135deg, rgba(255,241,247,0.72), rgba(255,249,235,0.84));
 border:1px solid rgba(191,154,172,0.42);
 border-radius:0.7vw;
+box-shadow:inset 0 0 0 0.05vw rgba(255,255,255,0.45);
 }
 .right-grid{
+position:relative;
+z-index:1;
 display:grid;
 grid-template-rows:auto auto 1fr auto;
 gap:1.2vh;
 height:100%;
 }
 .info-card{
-background:rgba(255,255,255,0.78);
+background:rgba(255,255,255,0.82);
 border:1px solid rgba(214,184,110,0.45);
 border-radius:0.8vw;
 padding:1.2vh 1vw;
-box-shadow:0 0.25vh 0.7vh rgba(0,0,0,0.05);
+box-shadow:
+0 0.25vh 0.7vh rgba(0,0,0,0.05),
+inset 0 0 0 0.04vw rgba(255,241,205,0.55);
 }
 .info-uniform{
 font-family:'Cinzel',serif;
@@ -197,7 +233,7 @@ gap:0.9vh;
 }
 .info-row{
 padding:1.05vh 0.95vw;
-background:rgba(255,251,244,0.78);
+background:rgba(255,251,244,0.84);
 border:1px solid rgba(214,184,110,0.42);
 border-radius:0.65vw;
 font-family:'Cinzel',serif;
@@ -205,49 +241,52 @@ font-size:1.7vw;
 line-height:1.35;
 color:#5a3d12;
 text-align:center;
+box-shadow:inset 0 0 0 0.03vw rgba(255,244,215,0.45);
 }
-.welcome-box{
+.irina-box{
 margin-top:auto;
-padding:1.2vh 1vw;
+padding:1.25vh 1vw;
 text-align:center;
 font-family:'Cinzel',serif;
-font-size:2vw;
-color:#ef8b5f;
-background:linear-gradient(135deg, rgba(255,244,237,0.86), rgba(255,250,240,0.80));
+font-size:2.2vw;
+color:#90a66a;
+background:linear-gradient(135deg, rgba(255,244,237,0.88), rgba(255,250,240,0.84));
 border:1px solid rgba(214,184,110,0.42);
 border-radius:0.8vw;
+box-shadow:inset 0 0 0 0.05vw rgba(255,241,205,0.55);
 }
-.welcome-box span{
-display:block;
-margin-top:0.4vh;
-font-size:2.2vw;
-color:#94a86b;
-}
-footer{
+.footer{
 position:relative;
 z-index:1;
 display:flex;
 justify-content:center;
 align-items:center;
-padding:1.1vh 2vw 1.4vh;
-border-top:0.25vh solid rgba(212,173,74,0.7);
-background:linear-gradient(to right, rgba(255,255,255,0.06), rgba(255,255,255,0.12), rgba(255,255,255,0.06));
-font-size:1.1vw;
+padding:1.15vh 2vw 1.4vh;
+border-top:0.22vh solid rgba(219,181,88,0.72);
+background:
+linear-gradient(to right, rgba(255,255,255,0.05), rgba(255,245,214,0.10), rgba(255,255,255,0.05));
+font-size:1.12vw;
 color:#f4e6b8;
 letter-spacing:0.04em;
 text-align:center;
+text-shadow:0 0.08vh 0.25vh rgba(0,0,0,0.35);
+}
+.loading-row td,
+.error-row td,
+.empty-row td{
+text-align:center;
+font-style:italic;
 }
 @media (max-width: 1400px){
-h1{font-size:3.6vw;}
+h1{font-size:3.7vw;}
 .subtitle{font-size:1.5vw;}
 .panel h2{font-size:2vw;}
 .arrivals-table th{font-size:1.25vw;}
 .arrivals-table td{font-size:1.7vw;}
 .notice{font-size:1.35vw;}
 .info-uniform,.info-row{font-size:1.45vw;}
-.welcome-box{font-size:2.25vw;}
-.welcome-box span{font-size:2.4vw;}
-footer{font-size:1.35vw;}
+.irina-box{font-size:2.35vw;}
+.footer{font-size:1.35vw;}
 }
 </style>
 </head>
@@ -271,38 +310,12 @@ footer{font-size:1.35vw;}
 <th>Guest</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td class="room">Room 1</td>
-<td class="guest g1">Emoke</td>
-</tr>
-<tr>
-<td class="room">Room 2</td>
-<td class="guest g2">Heeman</td>
-</tr>
-<tr>
-<td class="room">Room 3</td>
-<td class="guest g3">Beverley</td>
-</tr>
-<tr>
-<td class="room">Room 4</td>
-<td class="guest g4">Elisabeth</td>
-</tr>
-<tr>
-<td class="room">Room 5</td>
-<td class="guest g5">Miraç Ali</td>
-</tr>
-<tr>
-<td class="room">Room 6</td>
-<td class="guest g6">Alexandra</td>
-</tr>
-<tr>
-<td class="room">Room 7</td>
-<td class="guest g7">Rafal</td>
+<tbody id="guest-table-body">
+<tr class="loading-row">
+<td colspan="2">Loading guest names...</td>
 </tr>
 </tbody>
 </table>
-
 <div class="notice">
 The keys are in the door of your room.
 </div>
@@ -314,27 +327,119 @@ The keys are in the door of your room.
 <div class="info-card info-uniform">
 Check-in 14:00
 </div>
-
 <div class="info-card info-uniform">
 Check-out 11:00
 </div>
-
 <div class="info-card info-list">
 <div class="info-row">Breakfast time 8:30 - 11:00</div>
 <div class="info-row">You can reach us at +32 471 66 14 12</div>
 <div class="info-row">Tram to St. Pieters Station N1 &amp; N3 (Lippensplein)</div>
 </div>
-
-<div class="welcome-box">
-Welcome!
-<span>Irina</span>
+<div class="irina-box">
+Irina
 </div>
 </div>
 </section>
 </main>
 
-<footer>
+<div class="footer">
 La Lys Rooms &amp; Suites, Vlaanderenstraat 42, 9000 Gent
-</footer>
+</div>
+
+<script>
+const SHEET_ID = "1_sVGTOngYcPZKQ0CEb2C2CyF12g2q_EbObIOSeaPX14";
+const SHEET_GID = "0";
+const CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${SHEET_GID}`;
+
+function escapeHtml(value){
+return String(value ?? "")
+.replace(/&/g,"&amp;")
+.replace(/</g,"&lt;")
+.replace(/>/g,"&gt;")
+.replace(/"/g,"&quot;")
+.replace(/'/g,"&#39;");
+}
+
+function parseCsvLine(line){
+const result = [];
+let current = "";
+let inQuotes = false;
+
+for(let i = 0; i < line.length; i++){
+const char = line[i];
+const next = line[i + 1];
+
+if(char === '"'){
+if(inQuotes && next === '"'){
+current += '"';
+i++;
+}else{
+inQuotes = !inQuotes;
+}
+}else if(char === "," && !inQuotes){
+result.push(current);
+current = "";
+}else{
+current += char;
+}
+}
+result.push(current);
+return result;
+}
+
+function parseCsv(text){
+const lines = text.trim().split(/\r?\n/).filter(line => line.trim() !== "");
+if(lines.length === 0) return [];
+
+const rows = lines.map(parseCsvLine);
+
+if(rows.length && /room/i.test(rows[0][0] || "") && /guest/i.test(rows[0][1] || "")){
+rows.shift();
+}
+
+return rows
+.filter(row => (row[0] || "").trim() !== "" || (row[1] || "").trim() !== "")
+.slice(0, 7)
+.map(row => ({
+room: (row[0] || "").trim(),
+guest: (row[1] || "").trim()
+}));
+}
+
+function guestColorClass(index){
+const classes = ["g1","g2","g3","g4","g5","g6","g7"];
+return classes[index % classes.length];
+}
+
+function renderGuestTable(rows){
+const tbody = document.getElementById("guest-table-body");
+
+if(!Array.isArray(rows) || rows.length === 0){
+tbody.innerHTML = '<tr class="empty-row"><td colspan="2">No guest names found.</td></tr>';
+return;
+}
+
+tbody.innerHTML = rows.map((r,index) => `
+<tr>
+<td class="room">${escapeHtml(r.room)}</td>
+<td class="guest ${guestColorClass(index)}">${escapeHtml(r.guest)}</td>
+</tr>
+`).join("");
+}
+
+async function loadGuests(){
+try{
+const res = await fetch(CSV_URL, {cache:"no-store"});
+const csvText = await res.text();
+const rows = parseCsv(csvText);
+renderGuestTable(rows);
+}catch(e){
+document.getElementById("guest-table-body").innerHTML =
+'<tr class="error-row"><td colspan="2">Unable to load guest names.</td></tr>';
+}
+}
+
+loadGuests();
+</script>
 </body>
 </html>
