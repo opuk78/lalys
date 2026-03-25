@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>Guest Information Board</title>
+<title>Welcome to Gent</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="refresh" content="60" />
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
@@ -70,13 +70,14 @@ font-weight:700;
 letter-spacing:0.08em;
 color:#efcf7d;
 text-shadow:0 0.18vh 0.35vh rgba(0,0,0,0.45);
+text-align:center;
 }
 .subtitle{
 margin:0;
 font-size:1.2vw;
-letter-spacing:0.18em;
-text-transform:uppercase;
+letter-spacing:0.08em;
 color:#f5e9bd;
+text-align:center;
 }
 main{
 position:relative;
@@ -182,29 +183,12 @@ border-radius:0.8vw;
 padding:1.2vh 1vw;
 box-shadow:0 0.25vh 0.7vh rgba(0,0,0,0.05);
 }
-.info-big{
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:1vw;
+.info-uniform{
 font-family:'Cinzel',serif;
-font-size:1.95vw;
-color:#5a3d12;
-}
-.info-big span:last-child{
-font-size:2.25vw;
-color:#e07f53;
-font-weight:700;
-}
-.info-medium{
-font-size:1.45vw;
+font-size:1.7vw;
 line-height:1.35;
-color:#402d22;
-}
-.info-medium strong{
-font-family:'Cinzel',serif;
-font-size:1.45vw;
-color:#674811;
+color:#5a3d12;
+text-align:center;
 }
 .info-list{
 display:flex;
@@ -212,16 +196,15 @@ flex-direction:column;
 gap:0.9vh;
 }
 .info-row{
-padding:0.95vh 0.95vw;
+padding:1.05vh 0.95vw;
 background:rgba(255,251,244,0.78);
 border:1px solid rgba(214,184,110,0.42);
 border-radius:0.65vw;
-font-size:1.22vw;
-line-height:1.35;
-}
-.info-row strong{
 font-family:'Cinzel',serif;
-color:#65460f;
+font-size:1.7vw;
+line-height:1.35;
+color:#5a3d12;
+text-align:center;
 }
 .welcome-box{
 margin-top:auto;
@@ -251,7 +234,7 @@ border-top:0.25vh solid rgba(212,173,74,0.7);
 background:linear-gradient(to right, rgba(255,255,255,0.06), rgba(255,255,255,0.12), rgba(255,255,255,0.06));
 font-size:1.1vw;
 color:#f4e6b8;
-letter-spacing:0.08em;
+letter-spacing:0.04em;
 text-align:center;
 }
 @media (max-width: 1400px){
@@ -261,9 +244,7 @@ h1{font-size:3.6vw;}
 .arrivals-table th{font-size:1.25vw;}
 .arrivals-table td{font-size:1.7vw;}
 .notice{font-size:1.35vw;}
-.info-big{font-size:2.2vw;}
-.info-big span:last-child{font-size:2.45vw;}
-.info-medium,.info-medium strong,.info-row{font-size:1.45vw;}
+.info-uniform,.info-row{font-size:1.45vw;}
 .welcome-box{font-size:2.25vw;}
 .welcome-box span{font-size:2.4vw;}
 footer{font-size:1.35vw;}
@@ -274,8 +255,8 @@ footer{font-size:1.35vw;}
 <header>
 <div class="header-inner">
 <img class="header-logo" src="logo.png" alt="Logo" />
-<h1>Guest Information</h1>
-<p class="subtitle">Check-in 24.03</p>
+<h1>Welcome to Gent</h1>
+<p class="subtitle">City of timeless romance</p>
 </div>
 </header>
 
@@ -330,32 +311,30 @@ The keys are in the door of your room.
 <section class="panel">
 <h2>Some Information</h2>
 <div class="right-grid">
-<div class="info-card info-big">
-<span>Check-in</span>
-<span>14:00</span>
+<div class="info-card info-uniform">
+Check-in 14:00
 </div>
 
-<div class="info-card info-big">
-<span>Check-out</span>
-<span>11:00</span>
+<div class="info-card info-uniform">
+Check-out 11:00
 </div>
 
 <div class="info-card info-list">
-<div class="info-row"><strong>Breakfast time</strong> 8:30 - 11:00</div>
-<div class="info-row"><strong>You can reach us at</strong> +32 471 66 14 12</div>
-<div class="info-row"><strong>Tram to St. Pieters Station</strong> N1 &amp; N3 (Lippensplein)</div>
+<div class="info-row">Breakfast time 8:30 - 11:00</div>
+<div class="info-row">You can reach us at +32 471 66 14 12</div>
+<div class="info-row">Tram to St. Pieters Station N1 &amp; N3 (Lippensplein)</div>
 </div>
 
 <div class="welcome-box">
 Welcome!
-<span>Izina</span>
+<span>Irina</span>
 </div>
 </div>
 </section>
 </main>
 
 <footer>
-Please use the uploaded file name <strong style="margin:0 0.35vw;">logo.png</strong> for your logo image.
+La Lys Rooms &amp; Suites, Vlaanderenstraat 42, 9000 Gent
 </footer>
 </body>
 </html>
