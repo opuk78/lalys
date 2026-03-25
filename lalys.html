@@ -1,190 +1,292 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>Welcome to The White Queen B&B</title>
+<title>Welcome to LaLys Hotel</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="refresh" content="60" />
-
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
-
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet" />
 <style>
-
-html, body {
+*{
+box-sizing:border-box;
+}
+html,body{
 margin:0;
 padding:0;
 width:100vw;
 height:100vh;
+overflow:hidden;
+font-family:'Playfair Display',serif;
+color:#f7f1e6;
+background:
+linear-gradient(135deg, rgba(28,25,46,0.92) 0%, rgba(58,28,66,0.90) 28%, rgba(16,79,110,0.82) 62%, rgba(25,114,120,0.78) 100%),
+url('https://www.transparenttextures.com/patterns/old-map.png');
+background-size:cover;
+background-repeat:repeat;
+}
+body{
 display:flex;
 flex-direction:column;
-font-family:'Playfair Display',serif;
-background-image:url('https://www.transparenttextures.com/patterns/old-map.png');
-background-color:#fff8f0;
-background-size:cover;
-background-repeat:no-repeat;
-background-position:center;
-color:#3a2c1b;
-text-align:center;
-box-sizing:border-box;
-overflow:hidden;
 }
-
 header{
-background-color:rgba(255,255,255,0.9);
-padding:1vh 2vw 0.4vh;
-border-bottom:0.3vh solid #d8c690;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:1.8vw;
+padding:2vh 3vw 1.5vh;
+background:linear-gradient(to right, rgba(255,255,255,0.10), rgba(255,255,255,0.22), rgba(255,255,255,0.10));
+backdrop-filter:blur(4px);
+border-bottom:0.25vh solid rgba(214,185,98,0.65);
+box-shadow:0 0.6vh 1.8vh rgba(0,0,0,0.18);
 }
-
+.logo-wrap{
+display:flex;
+align-items:center;
+justify-content:center;
+width:6vw;
+min-width:70px;
+max-width:130px;
+height:6vw;
+min-height:70px;
+max-height:130px;
+border-radius:50%;
+background:rgba(255,255,255,0.10);
+border:1px solid rgba(231,204,122,0.55);
+box-shadow:0 0.4vh 1.4vh rgba(0,0,0,0.18);
+padding:0.6vw;
+}
 header img{
-width:4vw;
+max-width:100%;
+max-height:100%;
+object-fit:contain;
+display:block;
 }
-
+.header-text{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+}
 h1{
+margin:0;
 font-family:'Cinzel',serif;
-font-size:2.2vw;
-margin:0.5vh 0 0;
-color:#bfa046;
+font-size:2.9vw;
+font-weight:700;
 letter-spacing:0.08em;
+color:#f3d784;
+text-shadow:0 0.15vh 0.35vh rgba(0,0,0,0.35);
 }
-
 .tagline{
-font-size:1vw;
-margin-top:0.2vh;
-color:#7b5e1c;
-letter-spacing:0.1em;
+margin:0.5vh 0 0;
+font-size:1.15vw;
+letter-spacing:0.14em;
+text-transform:uppercase;
+color:#f7e8bb;
+opacity:0.95;
 }
-
 main{
 flex:1;
 display:flex;
-justify-content:center;
-gap:1vw;
-padding:1vh 2vw;
-max-width:95vw;
-margin:auto;
+gap:1.4vw;
+padding:2vh 2vw;
+width:100%;
+max-width:100vw;
 }
-
 .column{
-flex:1;
-background-color:rgba(255,254,249,0.95);
-padding:1vh 1vw;
-border-radius:0.6vw;
-box-shadow:0 0.2vh 0.6vh rgba(0,0,0,0.08);
-border:1px solid #e4d6a7;
-min-width:15vw;
+background:linear-gradient(180deg, rgba(255,248,235,0.93) 0%, rgba(250,242,230,0.88) 100%);
+border:1px solid rgba(223,190,111,0.75);
+border-radius:1vw;
+box-shadow:0 1vh 3vh rgba(0,0,0,0.16);
+padding:1.6vh 1.2vw;
+color:#3e2b22;
 display:flex;
 flex-direction:column;
+min-height:0;
 }
-
+.side-column{
+flex:1.15;
+}
 .center-column{
-flex:3;
-display:flex;
-flex-direction:column;
+flex:2.7;
 justify-content:space-between;
 }
-
 h2{
+margin:0 0 1.1vh;
 font-family:'Cinzel',serif;
-font-size:1.4vw;
-color:#8b6c1e;
-margin-top:0;
+font-size:1.55vw;
+line-height:1.3;
+color:#7d5a12;
+text-align:center;
 }
-
 ul{
 list-style:none;
 padding:0;
-font-size:1vw;
 margin:0;
+display:flex;
+flex-direction:column;
+gap:0.8vh;
 }
-
 li{
-padding:0.5vh;
-margin:0.5vh 0;
-background:#fff;
-border:1px solid #e4d6a7;
-border-radius:0.4vw;
+padding:0.9vh 0.8vw;
+background:rgba(255,255,255,0.78);
+border:1px solid rgba(214,187,118,0.55);
+border-radius:0.6vw;
+font-size:1.08vw;
+line-height:1.35;
+box-shadow:0 0.25vh 0.7vh rgba(0,0,0,0.04);
 }
-
+.highlight-box{
+margin-top:0.8vh;
+padding:1vh 1vw;
+background:linear-gradient(135deg, rgba(116,78,160,0.10), rgba(37,124,145,0.10));
+border:1px solid rgba(138,103,173,0.22);
+border-radius:0.7vw;
+}
+.date-title{
+font-size:1.75vw;
+}
 table{
 width:100%;
-font-size:1vw;
 border-collapse:collapse;
+font-size:1.25vw;
+background:rgba(255,255,255,0.74);
+border-radius:0.7vw;
+overflow:hidden;
 }
-
-table th, table td{
+thead tr{
+background:linear-gradient(to right, rgba(132,89,33,0.12), rgba(200,168,85,0.22), rgba(132,89,33,0.12));
+}
+th,td{
+padding:1vh 0.9vw;
 text-align:left;
-padding:0.5vh;
-border-bottom:1px solid #e4d6a7;
+border-bottom:1px solid rgba(210,183,120,0.45);
 }
-
-.reminder{
-margin-top:auto;
-font-weight:700;
-font-size:1vw;
-color:#7b431c;
-padding-top:1vh;
+th{
 font-family:'Cinzel',serif;
+font-size:1.1vw;
+color:#6a4d11;
+letter-spacing:0.04em;
 }
-
+td{
+font-size:1.22vw;
+color:#35261d;
+}
+tbody tr:nth-child(even){
+background:rgba(255,250,244,0.72);
+}
+tbody tr:last-child td{
+border-bottom:none;
+}
+.reminder{
+margin-top:1.6vh;
+padding:1.2vh 1vw;
+font-family:'Cinzel',serif;
+font-size:1.08vw;
+line-height:1.5;
+text-align:center;
+color:#6a2f42;
+background:linear-gradient(135deg, rgba(255,240,245,0.70), rgba(255,248,232,0.78));
+border:1px solid rgba(194,150,171,0.42);
+border-radius:0.7vw;
+}
 footer{
-background-color:rgba(255,255,255,0.9);
-border-top:0.3vh solid #d8c690;
 display:flex;
 justify-content:space-between;
-padding:1vh 4vw;
-font-size:1.1vw;
+align-items:stretch;
+gap:1.2vw;
+padding:1.4vh 2.2vw;
+background:linear-gradient(to right, rgba(35,22,48,0.78), rgba(18,65,85,0.72));
+border-top:0.25vh solid rgba(214,185,98,0.60);
+box-shadow:0 -0.5vh 1.6vh rgba(0,0,0,0.16);
 }
-
-.footer-left{
-text-align:left;
-width:60%;
-}
-
+.footer-left,
 .footer-right{
-text-align:right;
-width:40%;
-font-weight:700;
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(240,213,134,0.22);
+border-radius:0.8vw;
+padding:1vh 1.2vw;
 }
-
+.footer-left{
+flex:2.3;
+text-align:left;
+}
+.footer-right{
+flex:1;
+text-align:right;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
 .review{
-font-size:0.9vw;
+margin:0;
+font-size:1vw;
+line-height:1.45;
 font-style:italic;
+color:#f8edd2;
 white-space:pre-line;
 }
-
+.footer-right p{
+margin:0.3vh 0;
+font-size:1.05vw;
+font-weight:700;
+color:#fff1c8;
+}
 .loading-row td,
 .error-row td,
 .empty-row td{
 text-align:center;
 font-style:italic;
+padding:1.5vh 1vw;
 }
-
+@media (max-width: 1200px){
+h1{
+font-size:4vw;
+}
+.tagline{
+font-size:1.7vw;
+}
+h2{
+font-size:2.1vw;
+}
+.date-title{
+font-size:2.25vw;
+}
+th,td,li,.review,.footer-right p,.reminder{
+font-size:1.5vw;
+}
+}
 </style>
 </head>
-
 <body>
-
 <header>
-<img src="crown.png">
-<h1>Welcome to The White Queen B&B</h1>
-<p class="tagline">Your stay begins with a touch of magic in Bruges</p>
+<div class="logo-wrap">
+<img src="logo.png" alt="LaLys Hotel Logo" />
+</div>
+<div class="header-text">
+<h1>Welcome to LaLys Hotel</h1>
+<p class="tagline">A refined stay in the heart of Gent</p>
+</div>
 </header>
-
 <main>
-
-<div class="column">
-<h2>All guests of our hotel receive a 10% loyalty discount for their stay at our "Hotel P6" in Antwerp</h2>
+<div class="column side-column">
+<h2>Exclusive Guest Benefit</h2>
+<div class="highlight-box">
 <ul>
-<li>+32470895482</li>
-<li>info@p6-antwerp.be</li>
+<li>Enjoy a 10% loyalty discount for your next stay at our partner hotel <strong>P6 Antwerp</strong></li>
+<li>Perfect for your next city break in Antwerp</li>
+<li>Ask us for more information during your stay</li>
 </ul>
 </div>
-
+<div class="highlight-box" style="margin-top:1.2vh;">
+<ul>
+<li><strong>Contact:</strong> +32 470 89 54 82</li>
+<li><strong>Email:</strong> info@p6-antwerp.be</li>
+</ul>
+</div>
+</div>
 <div class="column center-column">
-
 <div>
-<h2>Guests Arriving Today – <span id="today-date"></span></h2>
-
+<h2 class="date-title">Guests Arriving Today – <span id="today-date"></span></h2>
 <table>
 <thead>
 <tr>
@@ -192,7 +294,6 @@ font-style:italic;
 <th>Guests</th>
 </tr>
 </thead>
-
 <tbody id="guest-table-body">
 <tr class="loading-row">
 <td colspan="2">Loading guest names...</td>
@@ -200,64 +301,47 @@ font-style:italic;
 </tbody>
 </table>
 </div>
-
 <p class="reminder">
-Please do not lock the entrance door with the key — just gently shut it.
-Please check if your reservation includes breakfast.
+Please do not lock the entrance door with the key — just gently close it.
+Please also check whether breakfast is included in your reservation.
 </p>
-
 </div>
-
-<div class="column">
-<h2>Information</h2>
+<div class="column side-column">
+<h2>Useful Information</h2>
 <ul>
-<li>Wi-Fi: TheWhiteQueenWifi</li>
-<li>Breakfast: 8:30–10:00</li>
-<li>Emergency: 112</li>
-<li>Taxi: +32 475 57 60 15</li>
-<li>No smoking indoors</li>
-<li>Check-out: 11:00</li>
+<li><strong>Wi-Fi:</strong> LaLysGuest</li>
+<li><strong>Breakfast:</strong> 8:00–10:30</li>
+<li><strong>Emergency:</strong> 112</li>
+<li><strong>No smoking indoors</strong></li>
+<li><strong>Check-out:</strong> 11:00</li>
+<li><strong>Need assistance?</strong> Please contact us anytime</li>
 </ul>
 </div>
-
 </main>
-
 <footer>
-
 <div class="footer-left">
-<p class="review">
-Dear Guest, our current rating on Booking.com is 9.1.
-Only "10" helps us improve it. If you were fully satisfied we would truly appreciate your support.
-Thank you!
-</p>
+<p class="review">Dear Guest, our goal is to provide you with a beautiful and memorable stay. If everything was perfect, we would truly appreciate your highest rating and kind review. Thank you very much for your support.</p>
 </div>
-
 <div class="footer-right">
-<p><strong>Sint-Jorisstraat 44, Bruges</strong></p>
-<p><strong>+32 470 84 58 51</strong></p>
+<p><strong>LaLys Hotel · Gent</strong></p>
+<p><strong>www.lalyshotel.com</strong></p>
+<p><strong>Welcome & enjoy your stay</strong></p>
 </div>
-
 </footer>
-
 <script>
-
 const SHEET_API_URL="https://script.google.com/macros/s/AKfycbwoZI6cPJuzNBvzapiUC0VrrGHOhGaVG74172WK1vxXXGyypPjq0td2Y1FDB1auS3WniA/exec";
-
 function escapeHtml(value){
 return String(value ?? "")
 .replace(/&/g,"&amp;")
 .replace(/</g,"&lt;")
 .replace(/>/g,"&gt;");
 }
-
 function renderGuestTable(rows){
 const tbody=document.getElementById("guest-table-body");
-
 if(!Array.isArray(rows)||rows.length===0){
 tbody.innerHTML='<tr class="empty-row"><td colspan="2">No guest names found.</td></tr>';
 return;
 }
-
 tbody.innerHTML=rows.map(r=>`
 <tr>
 <td>${escapeHtml(r.room)}</td>
@@ -265,7 +349,6 @@ tbody.innerHTML=rows.map(r=>`
 </tr>
 `).join("");
 }
-
 async function loadGuests(){
 try{
 const res=await fetch(SHEET_API_URL,{cache:"no-store"});
@@ -275,14 +358,11 @@ renderGuestTable(data);
 document.getElementById("guest-table-body").innerHTML='<tr class="error-row"><td colspan="2">Unable to load guest names.</td></tr>';
 }
 }
-
 window.onload=function(){
 const today=new Date();
 document.getElementById("today-date").textContent=today.toLocaleDateString(undefined,{year:'numeric',month:'long',day:'numeric'});
 loadGuests();
 };
-
 </script>
-
 </body>
 </html>
